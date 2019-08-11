@@ -1,0 +1,27 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.Titulo {
+    font-size: 4rem;
+    font-weight: bold;
+
+}
+
+input {
+    width: 20%;
+}
+
+button {
+    width: 8%;
+    background: darkcyan;
+    color: azure;
+    font-weight: bold;
+}
+
+.result{
+    background: black;
+    color:white;
+}

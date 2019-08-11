@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Inicio</title>
+        <link rel="stylesheet" type="text/css" href="/static/estilos.css">
+    </head>
+    <body>
+        <center>
+            <span class="Titulo">CV Calculator</span>
+        </center>
+        <form method="POST" action="/">
+            <label>Fluid State</label>
+            <select name="state">
+                {% if states %}
+                    {% for item in states %}
+                        <option>{{ item }}</option>
+                    {% endfor %}
+                {% endif %}
+            </select>
+
+            <br><br>
+            <label>Max Fluid</label>
+            <input type="number" name="MaxFluid">
+
+            <br><br>
+            <label>Norm Fluid</label>
+            <input type="number" name="NormFluid">
+
+            <br><br>
+            <label>Min Fluid</label>
+            <input type="number" name="MinFluid">
+
+            <button id="btnCalcular">CALCULATE</button>
+        </form>
+        <br><br>
+        {% if maxfluid %}
+            <span class="result">Max Flow is: {{ maxfluid }}</span>
+        {% endif %}
+        <script src="/static/js.js"></script>
+    </body>
+</html>
